@@ -10,7 +10,7 @@ SECTIONS
 	/* '.' is the location counter. It counts locations. */
 	
 	. = SIZEOF_HEADERS;
-    . = ALIGN(__section_alignment__);
+	. = ALIGN(__section_alignment__);
 
 	/* Code */
     .ZERO  __image_base__ + ( __section_alignment__ < 0x1000 ? . : __section_alignment__ ) :
